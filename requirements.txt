@@ -107,7 +107,6 @@ requests==2.18.4
 rope==0.10.7
 scikit-learn==0.19.1
 scipy==1.0.1
-scribd-downloader==0.1.6
 selenium==3.141.0
 Send2Trash==1.5.0
 simplegeneric==0.8.1
