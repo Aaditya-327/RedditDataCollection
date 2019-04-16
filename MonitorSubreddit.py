@@ -3,7 +3,7 @@
 
 # In[2]:
 
-
+import os
 import praw
 import time
 import json
@@ -20,10 +20,10 @@ def submissionData(num, submission, now):
     return {"rank": num, "id": id_, "time": utc_, "upvote": upv_}
 
 def authorize():
-    user_data = {"username": "Aad1tya23",
-            "password": "p@ssw0rd",
-            "client_id": "cqtbqCS6tCeJ9g",
-            "client_secret": "JQwcpZR8346OcezEg2XRQCYxksw",
+    user_data = {"username": os.environ["username"],
+            "password": os.environ["password"],
+            "client_id": os.environ["client_id"],
+            "client_secret": os.environ["client_secret"],
             "user_agent": "Reddit python extractor by /u/Aad1tya23"}
     reddit = praw.Reddit(username = user_data["username"],
                          password = user_data["password"],
