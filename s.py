@@ -101,12 +101,17 @@ def main(display):
 last_did = time.time()
 print("Started at: ", last_did)
 
+# while True:
+#     present = time.time()
+#     if present - last_did > 6*60:
+#         print()
+#         main(display)
+#         last_did = present
+#     else:
+#         print(".", end=" ")
+#         time.sleep(60* 2)
+
+
 while True:
-    present = time.time()
-    if present - last_did > 6*60:
-        print()
-        main(display)
-        last_did = present
-    else:
-        print(".", end=" ")
-        time.sleep(60* 2)
+    main(display)
+    time.sleep(300)
