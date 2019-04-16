@@ -1,1 +1,1 @@
-worker: python MonitorSubreddit.py
+worker: python s.py
