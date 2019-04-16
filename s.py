@@ -99,6 +99,7 @@ def main(display):
 
 
 last_did = time.time()
+print("Started at: ", last_did)
 
 while True:
     present = time.time()
