@@ -82,7 +82,7 @@ def output_json(now, data_hot, data_top):
     return dropbox_files
 
     
-def main(display):    
+def main():    
     reddit = authorize()
     print("Authorized: ", reddit.user.me())
 
@@ -105,7 +105,7 @@ print("Started at: ", last_did)
 #     present = time.time()
 #     if present - last_did > 6*60:
 #         print()
-#         main(display)
+#         main()
 #         last_did = present
 #     else:
 #         print(".", end=" ")
@@ -113,5 +113,5 @@ print("Started at: ", last_did)
 
 
 while True:
-    main(display)
+    main()
     time.sleep(300)
