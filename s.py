@@ -9,6 +9,12 @@ import json
 from dropboxUP import upload
 number = 2500
 
+user_data = {"username": os.environ["username"],
+             "password": os.environ["password"],
+             "client_id": os.environ["client_id"],
+             "client_secret": os.environ["client_secret"],
+             "user_agent": "Reddit python extractor by /u/Aad1tya23"}  
+TOKEN = os.environ["dropbox_token"]
 # In[3]:
 
 
@@ -20,11 +26,7 @@ def submissionData(num, submission, now):
     return {"rank": num, "id": id_, "time": utc_, "upvote": upv_}
 
 def authorize():
-    user_data = {"username": os.environ["username"],
-             "password": os.environ["password"],
-             "client_id": os.environ["client_id"],
-             "client_secret": os.environ["client_secret"],
-             "user_agent": "Reddit python extractor by /u/Aad1tya23"}    
+      
     
     reddit = praw.Reddit(username = user_data["username"],
                          password = user_data["password"],
@@ -76,7 +78,7 @@ def output_json(now, data_hot, data_top):
         "data_top": data_top,
         "keys": "Id, Hours uploaded, Upvotes"
     }
-    TOKEN = os.environ["dropbox_token"]
+    
     
     dropbox_files = upload(TOKEN, str(int(now)), json_dump)
     return dropbox_files
