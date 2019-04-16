@@ -116,4 +116,4 @@ print("Started at: ", last_did)
 
 while True:
     main()
-    time.sleep(300)
+    time.sleep(3590)
