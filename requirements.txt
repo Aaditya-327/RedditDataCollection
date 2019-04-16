@@ -1,7 +1,4 @@
 jsonschema==2.6.0
-matplotlib==2.2.2
-numpy==1.16.2
-numpydoc==0.8.0
 praw==6.1.1
 prawcore==1.0.1
 dropbox==9.3.0
