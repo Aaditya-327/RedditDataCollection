@@ -101,7 +101,7 @@ def main(display):
 
 while True:
     present = time.time()
-    if present - last_did > 5*60:
+    if present - last_did > 6*60:
         print()
         main(display)
         last_did = present
