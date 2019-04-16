@@ -98,6 +98,7 @@ def main(display):
 
 
 
+last_did = time.time()
 
 while True:
     present = time.time()
